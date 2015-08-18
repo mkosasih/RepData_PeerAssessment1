@@ -14,39 +14,8 @@ The data shows number of steps taken in 5 minute intervals each day during Octob
 Data <- read.csv("activity.csv")
 Data$date <- as.Date(Data$date)
 library(dplyr)
-```
-
-```
-## Warning: package 'dplyr' was built under R version 3.1.3
-```
-
-```
-## 
-## Attaching package: 'dplyr'
-## 
-## The following object is masked from 'package:stats':
-## 
-##     filter
-## 
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-```
-
-```r
 library(ggplot2)
-```
-
-```
-## Warning: package 'ggplot2' was built under R version 3.1.3
-```
-
-```r
 library(scales)
-```
-
-```
-## Warning: package 'scales' was built under R version 3.1.3
 ```
 
 ##Q1: What is mean total number of steps taken per day (ignoring missing value)?
@@ -166,4 +135,5 @@ qplot(interval, Average_Step, data = interval_step2, facets = wdays~.) + geom_li
 ![plot of chunk unnamed-chunk-12](figure/unnamed-chunk-12-1.png) 
 
 The graphs shows that the maximum steps happened on weekdays between interval 800 - 1000.  However, on the weekend, it shows that between interval 800 - 2000 the individual had more uniform number of steps, averaging around 90 steps per interval
+
 
